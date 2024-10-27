@@ -4,16 +4,16 @@
     box-sizing: border-box;
 }
 
-.text-center{
+.text-center {
     color: #fff;
-    font-size: 3rem; 
-    overflow: hidden; 
-    white-space: nowrap; 
-    width: 24ch; 
-    border-right: 2px solid; 
-    animation: typing 4s steps(24, end); 
-    text-align: center; 
-    margin: 0 auto; 
+    font-size: clamp(1.5rem, 3vw, 3rem); /* Responsive font size */
+    overflow: hidden;
+    white-space: nowrap;
+    width: 24ch;
+    border-right: 2px solid;
+    animation: typing 4s steps(24, end);
+    text-align: center;
+    margin: 0 auto;
 }
 
 @keyframes typing {
