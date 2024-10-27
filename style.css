@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-center{
+    color: #fff;
+    font-size: 3rem; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    width: 24ch; 
+    border-right: 2px solid; 
+    animation: typing 4s steps(24, end); 
+    text-align: center; 
+    margin: 0 auto; 
+}
+
+@keyframes typing {
+    from {
+        width: 0; 
+    }
+    to {
+        width: 24ch; 
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent; 
+    }
+    50% {
+        border-color: white; 
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.d-flex{
+    margin: 5vh auto 0 auto;
+}
+
+.stick {
+    height: 450px;
+    width: 10px;
+    background-color: rgb(110, 110, 110);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.flag {
+    width: 270px;
+    background-color: transparent;
+    position: relative;
+    animation: reveal-flag 1s ease-out forwards, raise-flag 3s ease-out forwards; /* Reveal, then raise */ 
+    animation-delay: 2s, 2s;  
+}
+
+@keyframes raise-flag {
+    0% {
+        transform: translateY(150px); 
+        opacity: 0; 
+    }
+
+    100% {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+/* Flag reveal animation */
+@keyframes reveal-flag {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.top {
+    height: 60px;
+    background-color: #ff9933;
+}
+
+.middle {
+    height: 60px;
+    background-color: #ffff;
+}
+
+.bottom {
+    height: 60px;
+    background-color: green;
+}
+
+.wheel {
+    height: 43px;
+    width: 43px;
+    border: 1px solid darkblue;
+    border-radius: 45px;
+    position: relative;
+    margin: 0 auto;
+    top: 10px;
+    bottom: 10px;
+    animation: wheel 5s linear infinite;
+}
+ 
+.wheel .line {
+    height: 100%;
+    width: 1px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    background: darkblue;
+}
+ 
+.line:nth-child(1) {
+    transform: rotate(15deg)
+}
+ 
+.line:nth-child(2) {
+    transform: rotate(30deg)
+}
+ 
+.line:nth-child(3) {
+    transform: rotate(45deg)
+}
+ 
+.line:nth-child(4) {
+    transform: rotate(60deg)
+}
+ 
+.line:nth-child(5) {
+    transform: rotate(75deg)
+}
+ 
+.line:nth-child(6) {
+    transform: rotate(90deg)
+}
+ 
+.line:nth-child(7) {
+    transform: rotate(105deg)
+}
+ 
+.line:nth-child(8) {
+    transform: rotate(120deg)
+}
+ 
+.line:nth-child(9) {
+    transform: rotate(135deg)
+}
+ 
+.line:nth-child(10) {
+    transform: rotate(150deg)
+}
+ 
+.line:nth-child(11) {
+    transform: rotate(165deg)
+}
+ 
+.line:nth-child(12) {
+    transform: rotate(180deg)
+}
+
+.wheel {
+    height: 43px;
+    width: 43px;
+    border: 1px solid darkblue;
+    border-radius: 45px;
+    position: relative;
+    margin: 0 auto;
+    top: 10px;
+    bottom: 10px;
+    animation: wheel 5s linear infinite;
+}
+
+@keyframes wheel {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.flag-step{
+    margin: -2vh 0 0 -10vw;
+    align-items: center;
+}
+
+.steps{
+    display: flex;
+    flex-direction: column;
+}
+
+.steps h5{
+    text-align: center;
+    margin: 20px auto;
+    color: #fff;
+}
+
+.steps div {
+    margin: 0 auto; 
+}
+
+.first {
+    height: 60px;
+    width: 200px;
+    background-color: #ff9933;
+}
+
+.second {
+    height: 60px;
+    width: 280px;
+    background-color: #989898;
+}
+
+.third {
+    height: 60px;
+    width: 360px;
+    background-color: green;
+}
+
+@media (max-width: 768px) {
+    .flag {
+        width: 200px;
+        animation: raise-flag 2s ease-out forwards;
+    }
+
+    .stick {
+        height: 350px;
+    }
+
+    .first {
+        width: 150px;
+    }
+
+    .second {
+        width: 200px;
+    }
+
+    .third {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flag {
+        width: 220px;
+        background-color: transparent;
+        position: relative;
+        animation: raise-flag 2s ease-out forwards;   
+    }
+    
+    .top {
+        height: 60px;
+        background-color: #ff9933;
+    }
+    
+    .middle {
+        height: 60px;
+        background-color: #fff;
+    }
+    
+    .bottom {
+        height: 60px;
+        background-color: green;
+    }
+
+    .flag-step{
+        margin-left: -25vw;
+        align-items: center;
+    }
+    
+    .steps{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .steps div {
+        margin: 0 auto; 
+    }
+
+    .stick {
+        height: 350px;
+    }
+
+    .first {
+        width: 150px;
+    }
+
+    .second {
+        width: 200px;
+    }
+
+    .third {
+        width: 250px;
+    }
+}
+
+/* Steps reveal animation */
+@keyframes reveal-steps {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Slide up from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stick reveal animation */
+@keyframes reveal-stick {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.steps {
+    opacity: 0;
+    animation: reveal-steps 1s ease-out forwards; 
+    animation-delay: 0.5s; 
+}
+
+.stick {
+    opacity: 0;
+    animation: reveal-stick 1s ease-out forwards; 
+    animation-delay: 1s; 
+}
+
+/* Sakura Effect */
+.sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.sakura {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+.flower1 {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.flower2 {
+    clip-path: polygon(50% 0%, 61% 20%, 98% 20%, 68% 40%, 79% 70%, 50% 60%, 21% 70%, 32% 40%, 2% 20%, 39% 20%);
+}
+
+.flower3 {
+    clip-path: polygon(50% 0%, 55% 25%, 85% 30%, 65% 55%, 75% 80%, 50% 65%, 25% 80%, 35% 55%, 15% 30%, 45% 25%);
+}
+
+.flower4 {
+    clip-path: polygon(50% 0%, 58% 22%, 95% 25%, 68% 45%, 78% 78%, 50% 65%, 22% 78%, 32% 45%, 5% 25%, 42% 22%);
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
